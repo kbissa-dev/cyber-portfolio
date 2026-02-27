@@ -11,20 +11,35 @@ Used in recon phase of every pentest.
 - filtered — firewall blocking it
 
 ## Commands I Use
+1. nmap scanme.nmap.org              — basic scan, found 5 ports
+2. nmap -sV scanme.nmap.org          — found OpenSSH 6.6.1 + Apache 2.4.7
+3. sudo nmap -A scanme.nmap.org      — full scan, OS detection, traceroute
+4. nmap -A target -oN report.txt     — save output to file
 
-### Basic scan
+### Every Scan Type - When and Why
+1. Basic TCP Connect scan (Default)
 nmap <target>
 
-### Find software versions
+2. Find software versions - Every Version has CVE history.
+ Old version = known vulnerabilities = potential exploit
 nmap -sV <target>
 
-### Full scan with OS detection
+3. Full scan with OS detection
 sudo nmap -A <target>
 
-### Stealth scan
+4. SYN Stealth scan - Most Important for Pentesters
 sudo nmap -sS <target>
 
-### Save output
+5. Aggressive Scan (-A) - Full Report Scan
+ sudo nmap -A <target>
+Combines everything: -sV + -O + --traceroute + default scripts.
+
+6. UDP Scan
+sudo nmap -sU <target>
+Much slower than TCP (can take hours on a full scan). 
+Important because many critical service run on UDP. 
+
+#### Save output
 nmap -A <target> -oN scan.txt
 
 ## What I Learned From Scanning scanme.nmap.org
