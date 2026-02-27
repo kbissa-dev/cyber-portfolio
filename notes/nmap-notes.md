@@ -43,10 +43,11 @@ Important because many critical service run on UDP.
 nmap -A <target> -oN scan.txt
 
 ## What I Learned From Scanning scanme.nmap.org
-- Port 22 open — SSH running
-- Port 80 open — Apache web server
-- Found outdated versions — searched CVEs on exploit-db
-- Traceroute showed 20 hops Australia to USA
+- Port 22 SSH — OpenSSH 6.6.1p1 — outdated, has RCE exploit (EDB-45001)
+- Port 80 HTTP — Apache 2.4.7 — outdated, CVE-2017-9798
+- Port 25 SMTP — filtered (firewall blocking — good)
+- OS: Linux 4.19-5.15 (95% confident)
+- 20 hops from Australia to USA server
 
 ## CVE Research Process
 1. Note open ports and versions from scan
@@ -60,4 +61,13 @@ nmap -A <target> -oN scan.txt
 - exploit-db.com  
 - cvedetails.com
 
+## Searchsploit commands
+searchsploit openssh 6.6
+searchsploit apache 2.4.7
+searchsploit vsftpd          — found backdoor in 2.3.4!
+searchsploit -m 45001        — copy exploit to current folder
 
+## Next
+- Set up Metasploitable in VirtualBox
+- vsftpd 2.3.4 backdoor is my first exploit target
+- Use Metasploit to exploit it
