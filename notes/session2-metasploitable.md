@@ -36,9 +36,10 @@
 - Fixed by aligning both VMs on the same Internal Network and validating the correct
  interface selection (ip route get, ping, targeted Nmap).
 
-#### What I learned
+##### What I learned - Key Insights
 
-- “Tool ran” ≠ “objective achieved” — always validate with independent checks (route, ping, port state).
+> “Tool ran” ≠ “objective achieved” — always validate with 
+> independent checks (route, ping, port state).
 
 - Network design (NAT vs Internal) changes what is reachable and from where.
 

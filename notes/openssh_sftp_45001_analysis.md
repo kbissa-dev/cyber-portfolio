@@ -1,4 +1,8 @@
 # Exploit-DB 45001 – OpenSSH < 6.6 SFTP (Command Execution)– Analysis
+> DISCLAIMER: This file is for educational and defensive security 
+> research only. The exploit code referenced is publicly available 
+> on Exploit-DB. This analysis was produced as part of a 
+> cybersecurity learning portfolio.
 
 ## What this is
 - Source: Exploit-DB ID 45001
