@@ -5,4 +5,5 @@ Write-ups focused on practical cybersecurity learning, analysis, and methodology
 ## Index
 
 - [OhSINT](./ohsint.md) — Beginner OSINT room focused on metadata, username pivoting, and public-source correlation.
+- - [SoMeSINT](./somesint.md) — A social media OSINT room focused on username pivoting, archived pages, source inspection, and cross-platform profiling.
 - [OWASP Top 10 2025 – Application Design Flaws](./owasp-top10-2025-application-design-flaws.md)
