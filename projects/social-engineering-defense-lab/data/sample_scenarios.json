@@ -1,0 +1,186 @@
+[
+  {
+    "id": "PH-001",
+    "title": "Payroll portal password reset",
+    "type": "phishing",
+    "channel": "email",
+    "scenario_text": "A user receives an email claiming their payroll portal password will expire today unless they reset it immediately using a provided link.",
+    "attacker_goal": "Steal login credentials.",
+    "red_flags": [
+      "urgency",
+      "credential request",
+      "suspicious link",
+      "authority"
+    ],
+    "why_someone_might_trust_it": "Payroll access is important and the message sounds routine.",
+    "risk_level": "High",
+    "recommended_action": "Do not click the link. Open the payroll portal directly from a known bookmark or official site and report the message."
+  },
+  {
+    "id": "PH-002",
+    "title": "Fake parcel delivery fee",
+    "type": "phishing",
+    "channel": "sms/email",
+    "scenario_text": "A message claims a parcel is delayed and asks the user to pay a small delivery fee through a link.",
+    "attacker_goal": "Capture payment details and personal information.",
+    "red_flags": [
+      "urgency",
+      "payment request",
+      "suspicious link",
+      "unexpected message"
+    ],
+    "why_someone_might_trust_it": "Many people are waiting for deliveries and the fee seems small.",
+    "risk_level": "High",
+    "recommended_action": "Do not use the link. Check the parcel status through the courier's official website or app."
+  },
+  {
+    "id": "PH-003",
+    "title": "Manager asks for gift cards",
+    "type": "phishing",
+    "channel": "email",
+    "scenario_text": "An email appears to come from a manager asking the employee to urgently buy gift cards for a client meeting and send back the codes.",
+    "attacker_goal": "Obtain money through gift card fraud.",
+    "red_flags": [
+      "authority",
+      "urgency",
+      "payment request",
+      "unusual process"
+    ],
+    "why_someone_might_trust_it": "Employees may fear delaying a manager's request.",
+    "risk_level": "High",
+    "recommended_action": "Verify through a known internal channel before taking any action and report the message."
+  },
+  {
+    "id": "PH-004",
+    "title": "Cloud storage shared document alert",
+    "type": "phishing",
+    "channel": "email",
+    "scenario_text": "A user receives a shared-document notification that asks them to log in to view an urgent document.",
+    "attacker_goal": "Steal cloud account credentials.",
+    "red_flags": [
+      "credential request",
+      "urgency",
+      "unexpected document",
+      "suspicious link"
+    ],
+    "why_someone_might_trust_it": "Shared document alerts are common in workplaces.",
+    "risk_level": "High",
+    "recommended_action": "Do not use the embedded link. Access the cloud platform directly and check whether the document is real."
+  },
+  {
+    "id": "VG-001",
+    "title": "Fake telecom account protection call",
+    "type": "vishing",
+    "channel": "phone",
+    "scenario_text": "A caller claims to be from a telecom provider and says unusual activity is occurring on the user's mobile account. They pressure the user to confirm personal details immediately.",
+    "attacker_goal": "Collect personal details and bypass account verification.",
+    "red_flags": [
+      "authority",
+      "urgency",
+      "personal data request",
+      "pressure to stay on the line"
+    ],
+    "why_someone_might_trust_it": "Telecom security issues feel serious and time-sensitive.",
+    "risk_level": "High",
+    "recommended_action": "End the call and contact the provider using an official number from the website or app."
+  },
+  {
+    "id": "VG-002",
+    "title": "Bank fraud team callback pressure",
+    "type": "vishing",
+    "channel": "phone",
+    "scenario_text": "A caller says they are from the bank fraud team and asks the user to confirm a one-time code to stop a suspicious transaction.",
+    "attacker_goal": "Capture MFA or verification codes.",
+    "red_flags": [
+      "authority",
+      "fear",
+      "MFA request",
+      "urgency"
+    ],
+    "why_someone_might_trust_it": "The target wants to stop fraud quickly.",
+    "risk_level": "High",
+    "recommended_action": "Do not share codes. Hang up and call the bank using the official number on the bank card or website."
+  },
+  {
+    "id": "VG-003",
+    "title": "IT support remote access request",
+    "type": "vishing",
+    "channel": "phone",
+    "scenario_text": "Someone claiming to be from IT support says the user's device is infected and asks them to install remote-access software.",
+    "attacker_goal": "Gain device access.",
+    "red_flags": [
+      "authority",
+      "fear",
+      "unexpected support call",
+      "request to install software"
+    ],
+    "why_someone_might_trust_it": "Users may assume IT can see problems before they do.",
+    "risk_level": "High",
+    "recommended_action": "Refuse the request and verify with internal IT using official contact channels."
+  },
+  {
+    "id": "VG-004",
+    "title": "Family emergency money request by phone",
+    "type": "vishing",
+    "channel": "phone",
+    "scenario_text": "A caller claims a relative is in trouble and pressures the user to transfer money immediately without calling anyone else.",
+    "attacker_goal": "Obtain money through emotional manipulation.",
+    "red_flags": [
+      "emotional pressure",
+      "urgency",
+      "secrecy",
+      "payment request"
+    ],
+    "why_someone_might_trust_it": "Panic can override careful thinking.",
+    "risk_level": "High",
+    "recommended_action": "Pause, independently contact the relative or another trusted family member, and do not send money until verified."
+  },
+  {
+    "id": "LG-001",
+    "title": "Legitimate payroll reminder",
+    "type": "legitimate",
+    "channel": "email",
+    "scenario_text": "HR sends a scheduled reminder that payroll details can be reviewed through the company intranet. No links ask for passwords and no urgent action is demanded.",
+    "attacker_goal": "None.",
+    "red_flags": [],
+    "why_someone_might_trust_it": "The message matches normal internal process.",
+    "risk_level": "Low",
+    "recommended_action": "Access the intranet through the usual internal route if needed."
+  },
+  {
+    "id": "LG-002",
+    "title": "Expected bank callback after user request",
+    "type": "legitimate",
+    "channel": "phone",
+    "scenario_text": "After the user contacts the bank through the official app, the bank returns the call and references the support case number without asking for passwords or one-time codes.",
+    "attacker_goal": "None.",
+    "red_flags": [],
+    "why_someone_might_trust_it": "The callback was expected and follows a known support process.",
+    "risk_level": "Low",
+    "recommended_action": "Continue carefully and still avoid sharing passwords or MFA codes."
+  },
+  {
+    "id": "LG-003",
+    "title": "Known school notification",
+    "type": "legitimate",
+    "channel": "email",
+    "scenario_text": "A school sends a routine newsletter from its normal domain with familiar branding and no requests for money, login details, or urgent confidential action.",
+    "attacker_goal": "None.",
+    "red_flags": [],
+    "why_someone_might_trust_it": "It matches previous legitimate communication style.",
+    "risk_level": "Low",
+    "recommended_action": "Read normally and verify only if something unusual appears."
+  },
+  {
+    "id": "LG-004",
+    "title": "Internal IT maintenance notice",
+    "type": "legitimate",
+    "channel": "email",
+    "scenario_text": "Internal IT announces planned maintenance and advises users that systems may be briefly unavailable. The message directs users to the internal service page rather than asking for login details.",
+    "attacker_goal": "None.",
+    "red_flags": [],
+    "why_someone_might_trust_it": "It matches normal internal communication and change management.",
+    "risk_level": "Low",
+    "recommended_action": "Use the normal internal status page if you want to confirm the maintenance window."
+  }
+]
